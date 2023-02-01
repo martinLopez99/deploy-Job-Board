@@ -5,11 +5,12 @@ const routes = require('./routes');
 const fs = require('fs');
 const bodyParser = require('body-parser');
 
+
 app.use(express.json());
 
 //set the path for express.js
 const path = require('path');
-
+const port = process.env.PORT;
 
 
 //set the view engine
@@ -49,6 +50,7 @@ app.put('/Jobs.json', (req, res) => {
 
 
 
+
 /* app.post('/Jobs.json', (req, res) => {
     // The request body will be available in req.body
     const jobData = req.body;
@@ -66,5 +68,5 @@ app.put('/Jobs.json', (req, res) => {
 
 app.get('/', (req, res) => res.sendFile(__dirname + '/index.html'))
 
-app.listen(3000, () => console.log('Server started on port 3000'))
+app.listen(port, () => console.log(`Server started on  port ${port}`)) 
 

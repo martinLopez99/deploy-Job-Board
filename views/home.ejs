@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Programming Job Board</title>
+    
+    <link rel="stylesheet" type="text/css" href="/app.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <header class="py-3">
+        <div class="container">
+            <h1 class="text-center">Programming Job Board</h1>
+        </div>
+    </header>
+
+
+    <nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 justify-content-end">
+                    <ul class="nav justify-content-end">
+                        <li class="nav-item">
+                            <a href="http://localhost:3000/">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="http://localhost:3000/postjob">Post a Job</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="http://localhost:3000/about">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h2>Available Jobs</h2>
+        <form action="#">
+            <div class="d-flex justify-content-center">
+                <table>
+                    <tr>
+                        <td>
+                            <div class="form-group d-flex">
+                                <label for="keywords" class="text-left">Job:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="keywords" name="keywords">
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group d-flex">
+                                <label for="location" class="text-left large-label">Location:</label>
+                                <div class="col-sm-4">
+                                    <input type="text" class="form-control" id="location" name="location">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <button type="submit" class="btn btn-success button_Filter" id="filter-button">Search</button>
+            </div>
+
+        </form>
+
+
+
+        <ul id="job-list">
+            <!-- Jobs List'd be placed here! -->
+        </ul>
+
+    </main>
+    <footer>
+        <p>Copyright ©2022 Programming Job Board</p>
+    </footer>
+    <script src="/Jobs.js"></script>
+
+</body>
+
+</html>
